@@ -1,0 +1,22 @@
+int RingS(float R1, float R2);
+
+int main()
+{
+	setlocale(LC_ALL, "Russian");
+	float r1, r2;
+	for (int i = 1; i < 4; i++) {
+		cout << "Введите r1 и r2: ";
+		cin >> r1 >> r2;
+		cout << RingS(r1, r2)<<endl;
+	}
+	return 0;
+
+    
+}
+int RingS(float r1,float r2) {
+	const float pi = 3.14;
+	if (r1 > r2) {
+		return pi * (r1*r1 - r2 * r2);
+	}
+	else cout << "Error";
+}
