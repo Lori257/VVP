@@ -1,0 +1,15 @@
+setlocale(LC_ALL, "Russian");
+	int n, k, a, b;
+	cout << "Введите n: ";
+	cin >> n;
+	k = 0;
+	a = 1;
+	if (n > 1) {
+		while (a < n) {
+			a = a + k;
+			k++;
+		}
+		cout << k << " " << a;
+	}
+	else cout << "Error";
+	return 0;
