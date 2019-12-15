@@ -1,0 +1,18 @@
+setlocale(LC_ALL, "Rus");
+     int k;
+     double v, p, s;
+     cout << "Введите процент вклада : ";
+     cin >> p;
+     v = 1000;
+     k = 0;
+	 if (p > 0 && p < 25) {
+		 while (v <= 1100)
+		 {
+			 v = v * (1 + (p / 100));
+			 k=k+1;
+		 }
+		 cout << endl << "Месяцы: " << k;
+		 cout << endl << "Сумма: " << v;
+	 }
+	 else cout << "Error";
+	 return 0;
