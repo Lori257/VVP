@@ -1,0 +1,12 @@
+setlocale(LC_ALL, "Russian");
+	int a, b, c;
+	cout << "Введите a,b,c: ";
+	cin >> a >> b >> c;
+	if (a < b && a < c) {
+		cout << endl << "Сумма двух наибольших: " << b + c;
+	}
+	else if (b < a && b < c) {
+		cout << endl << "Сумма двух наибольших: " << a + c;
+	}
+	else cout << endl << "Сумма двух наибольших: " << a + b;
+	return 0;
