@@ -1,0 +1,22 @@
+setlocale(LC_ALL, "Russian");
+	string napr;
+	cout << "Введите направление: ";
+	cin >> napr;
+	string dir[4] = { "Север ", "Запад", "Юг", "Восток" };
+	int v = 0;
+	if (napr == "С" || napr == "с") v = 0;
+	else if (napr == "З" || napr == "з") v = 1;
+	else if (napr == "Ю" || napr == "ю") v = 2;
+	else if (napr == "В" || napr == "в") v = 3;
+	int n;
+	cout << "Введите n: ";
+	cin >> n;
+	if (n == 0 || n == 1 || n == -1) {
+		v = (v + n) % 4;
+		if (v == -1) {
+			v = 3;
+			cout << dir[v];
+		}
+		else cout << dir[v];
+	}
+	return 0;
