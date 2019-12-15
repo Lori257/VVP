@@ -1,0 +1,13 @@
+setlocale(LC_ALL, "Russian");
+	int a, b, c,x,y;
+	cout << "Введите a, b и c: ";
+	cin >> a >> b >> c;
+	x = b;
+	b = a;
+	y = c;
+	c = x;
+	a = y;
+	cout << "Новое значение a: " << a << endl;
+	cout << "Новое значение b: " << b << endl;
+	cout << "Новое значение c: " << c << endl;
+	return 0;
