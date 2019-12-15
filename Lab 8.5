@@ -1,0 +1,16 @@
+setlocale(LC_ALL, "Russian");
+	int n;
+	cout << "Введите n: ";
+	cin >> n;
+	if (n > 0)
+	{
+		if (n % 2 == 0) cout << "Положительное четное ";
+		else cout << "Положительное нечетное";
+
+	}
+	else if (n < 0) {
+		if (n % 2 == 0) cout << "Отрицательное четное ";
+		else cout << "Отрицательное нечетноe";
+	}
+	else cout << "нулевое значение";
+	return 0;
