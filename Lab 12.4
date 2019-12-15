@@ -1,0 +1,40 @@
+int Quarter();
+
+int main()
+{
+	setlocale(LC_ALL, "Rus");
+	int n;
+	cout << "Введите номер задания: ";
+	cin >> n;
+	if (n == 4) {
+		for (int i = 1; i <= 3; i++) {
+			cout << "Четверть: " << Quarter() << endl;
+		}
+	}
+	else if (n == 5) {
+		cout << Fact2();
+	}
+}
+int Quarter()
+{
+	double x, y, k;
+	cout << "Введите x: ";
+	cin >> x;
+	cout << "Введите y: ";
+	cin >> y;
+	if (x != 0 & y != 0)
+	{
+		if (x < 0)
+		{
+			if (y < 0) k = 3;
+			else k = 2;
+		}
+		else
+		{
+			if (y < 0) k = 4;
+			else k = 1;
+		}
+	}
+	else k = 0;
+	return k;
+}
