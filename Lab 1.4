@@ -1,0 +1,12 @@
+setlocale(LC_ALL, "Russian");
+	double a, b;
+	cout << "Введите a и b: ";
+	cin >> a >> b;
+	if (a != 0 && b != 0) {
+		cout << "Сумма: " << pow(a,2)+pow(b,2) << endl;
+		cout << "Произведение: " << pow(a,2)*pow(b,2) << endl;
+		cout << "Частное: " << pow(a,2)/pow(b,2) << endl;
+		cout << "Разность: " << pow(a, 2) - pow(b, 2) << endl;
+	}
+	else cout << "Error";
+	return 0;
