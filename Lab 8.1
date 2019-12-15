@@ -1,0 +1,13 @@
+setlocale(LC_ALL, "Russian");
+	int A, B;
+	cout << "Ввести А и В: ";
+	cin >> A >> B;
+	if (A > B) {
+		B = A;
+	}
+	else if (B > A) {
+		A = B;
+	}
+	else A = B = 0;
+	cout << endl << "Новые значения: " << A << " " << B;
+	return 0;
