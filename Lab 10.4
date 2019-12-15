@@ -1,0 +1,15 @@
+setlocale(LC_ALL, "Russian");
+    double a;
+    int n;
+    cout << "Введите A и N: ";
+    cin >> a >> n;
+    if (n > 0){
+    double x = 0;
+    for (int i = 0; i <= n; i++){
+    x = x + (pow(a, i));
+     }
+     cout << "Сумма: " << x;
+
+}
+     else cout << "Error";
+     return 0;
