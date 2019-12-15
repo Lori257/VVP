@@ -1,0 +1,13 @@
+setlocale(LC_ALL, "Russian");
+	int a, b;
+	cout << "Введите трехзначное число: ";
+	cin >> a;
+	if (a >= 100 && a < 1000)
+	{
+		b = a / 100;
+		a = (a % 100) * 10;
+		b = a + b;
+		cout << b;
+	}
+	else cout << "Error";
+	return 0;  
