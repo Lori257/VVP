@@ -1,0 +1,12 @@
+setlocale(LC_ALL, "Russian");
+	int a, b, n;
+	cout << "Введите a и b: ";
+	cin >> a >> b;
+	if (a > b) {
+		while (a - b > 0) {
+			a = a - b;
+		}
+		cout << a;
+	}
+	else cout << "Error";
+	return 0;
