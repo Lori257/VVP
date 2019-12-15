@@ -1,0 +1,14 @@
+setlocale(LC_ALL, "Russian");
+	int a, b;
+	cout << "Введите двузначное число: ";
+	cin >> a;
+	if (a >= 10 && a < 100)
+	{
+		b = a % 10;
+		a = a / 10;
+		b = (b * 10) + a;
+		cout << "Новое число: " << b;
+	}
+	else cout << "Error";
+
+	return 0;  
