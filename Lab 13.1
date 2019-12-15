@@ -1,0 +1,15 @@
+setlocale(LC_ALL, "Russian");
+	int n,k;
+	cout << "Введите n: ";
+	cin >> n;
+	int* mass = new int[n];
+	if (n > 0) {
+		k = 1;
+		for (int i = 0; i < n; i++) {
+			mass[i] = k;
+			k = k + 2;
+			cout << mass[i] << " ";
+		}
+	}
+	else cout << "Error";
+	return 0;
