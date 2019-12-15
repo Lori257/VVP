@@ -1,0 +1,19 @@
+setlocale(LC_ALL, "Rus");
+	int n, a, b, v, k;
+	cout << "Введите N,являющееся числом Фибоначчи: ";
+	cin >> n;
+	int vs[200];
+	vs[0] = 0;
+	vs[1] = 1;
+	if (n == 0) k = 0;
+	else if (n == 1) k = 1;
+	else
+	{
+	    for (int i = 2; i < 200; i++)
+		{
+			vs[i] = vs[i - 1] + vs[i - 2];
+			if (n == vs[i]) k = i;
+		}
+	}
+	cout << "Порядковый номер: " << k;
+	return 0;
