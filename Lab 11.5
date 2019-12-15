@@ -1,0 +1,19 @@
+setlocale(LC_ALL, "Russian");
+	int a, b, nod;
+	cout << "Введите a и b: ";
+	cin >> a>>b;
+	if (a > 0 && b > 0) {
+		while (a != 0 && b != 0)
+		{
+			if (a > b) {
+				a = a % b;
+			}
+			else {
+				b = b % a;
+			}
+		}
+		nod = a + b;
+		cout << "НОД: " << nod;
+	}
+	else cout << "Error";
+	return 0;    
