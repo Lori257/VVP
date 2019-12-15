@@ -1,0 +1,14 @@
+setlocale(LC_ALL, "Russian");
+	int a, b, c, d;
+	cout << "Введите А: ";
+	cin >> a;
+	if (a >= 100 && a < 1000) {
+		b = a / 100;
+		c = (a % 100) / 10;
+		a = a % 10;
+		if (b < c && c < a) cout << endl << "True";
+		else if (b > c && c > a) cout << endl << "True";
+		else cout << endl << "False";
+	}
+	else cout << endl << "Error";
+	return 0;
