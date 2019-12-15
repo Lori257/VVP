@@ -1,0 +1,15 @@
+setlocale(LC_ALL, "Russian");
+	float n;
+	float pr;
+	cout << "Введите n: ";
+	cin >> n;
+	pr = 1;
+	if (n > 0) {
+		for (float i = 1; i <= n; i++) {
+
+			pr = pr * (1 + i / 10);
+			cout << "Произведение: " << pr << endl;
+		}
+	}
+	else cout << "Error";
+	return 0;
