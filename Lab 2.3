@@ -1,0 +1,16 @@
+setlocale(LC_ALL, "Russian");
+	int a, b, c, ac, bc, p;
+	cout << "Введите a,b и c: ";
+	cin >> a >> b >> c;
+	if (c < b && a < c)
+	{
+		ac = abs(a - c);
+		bc = abs(b - c);
+		p = ac * bc;
+		cout << "Длина ac=" << ac << " Длина bc=" << bc << " Произведение ac и bc" << p;
+	}
+	else
+	{
+		cout << "Error";
+	}
+	return 0;
