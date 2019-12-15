@@ -1,0 +1,21 @@
+setlocale(LC_ALL, "Russian");
+	int n;
+	cout << "Введите n: ";
+	cin >> n;
+	if (n >= 1 && n < 1000) {
+		if (n >= 1 && n < 10) {
+			if (n % 2 == 0) cout << "Четное однозначное";
+			else cout << "Нечетное однозначное";
+
+		}
+		else if (n >= 10 && n < 100) {
+			if (n % 2 == 0) cout << "Четное двузначное";
+			else cout << "Нечетное двузначное";
+
+		}
+		else if (n >= 100 && n < 1000) {
+			if (n % 2 == 0) cout << "Четное трехзначное";
+			else cout << "Нечетное трехзначное";
+		}
+		else cout << "Error";
+	return 0;
