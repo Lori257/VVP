@@ -1,0 +1,16 @@
+setlocale(LC_ALL, "Russian");
+	int x, y;
+	cout << "Введите координаты точки, не лежащей на осях(x; y): ";
+	cin >> x >> y;
+	if (x != 0 && y != 0) {
+		if (x > 0) {
+			if (y > 0) cout << "Первая четверть"; 
+			else cout << "Четвертая четверть";
+		}
+		else {
+			if (y > 0) cout << "Третья четверть"; 
+			else cout << "Вторая четверть"; 
+		}
+	}
+	else cout << "Error";
+	return 0;
