@@ -1,0 +1,11 @@
+setlocale(LC_ALL, "Russian");
+     double a;
+     int n;
+     cout << "Введите a и n: ";
+     cin >> a >> n;
+     double x = 0;
+	 for (int i = 0; i <= n; i++) {
+		 x = x + (pow(-1, i) * (pow(a, i)));
+	 }
+     cout << "Значение выражения: " << x;
+     return 0;
