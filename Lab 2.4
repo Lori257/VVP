@@ -1,0 +1,13 @@
+setlocale(LC_ALL, "Russian");
+	double x1, y1, x2, y2,a,b,S,P;
+	cout << "Введиет координаты первой вершины: ";
+	cin >> x1 >> y1;
+	cout << "Введите координаты второй вершины: ";
+	cin >> x2 >> y2;
+	a = abs(y2 - y1);
+	b = abs(x2 - x1);
+	S = a * b;
+	P = 2*(a + b);
+	cout << "Площадь= " << S << endl;
+	cout << "Периметр= " << P << endl;
+	return 0;
