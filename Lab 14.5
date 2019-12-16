@@ -1,0 +1,19 @@
+setlocale(LC_ALL, "Russian");
+	int n,f,p;
+	cout << "Введите n: ";
+	cin >> n;
+	int* mass = new int[n];
+	for (int i = 0; i < n; i++) {
+		cin >> mass[i];
+	}
+	for (int i = 0; i < n; i++) {
+		for (int j = 0; j < n; j++) {
+			if (mass[i] == mass[j] && i != j) {
+				f = i;
+				p = j;
+			}
+		}
+	}
+	if (p > f)	cout << "Номера одинаковых элементов: " << f << " " << p;
+	else cout << "Номера одинаковых элементов: " << p << " " << f;
+	return 0;
