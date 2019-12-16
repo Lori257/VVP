@@ -1,0 +1,24 @@
+    setlocale(LC_ALL, "Rus");	
+    int i, n;
+		double k,sr;
+		sr = 0;
+		cout << "Введите n: ";
+		cin >> n;
+		cout << "Введите k: ";
+		cin >> k;
+		int* A = new int[n];
+		float* B = new float[n];
+		for (i = 0; i < n; i++) {
+			cin >> A[i];
+		}
+		sr = 0;
+		B[0] = A[0];
+		for (i = 1; i<=k; i++) {
+			sr = A[i] + sr;
+			B[i] = sr / k;
+		}
+		cout << "Новый массив B: ";
+		for (i = 0; i<=k; i++) {
+			cout << B[i] << " ";
+		}
+    return 0;
