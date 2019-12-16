@@ -1,0 +1,41 @@
+      setlocale(LC_ALL, "Rus");
+			int n,i,min,max,minI,maxI;
+			cout << "Введите n: ";
+			cin >> n;
+			min = 0;
+			max = 0;
+			minI = 0;
+			maxI = 0;
+			int* mass = new int[n];
+			for (i = 0; i < n; i++) {
+				cin >> mass[i];
+			}
+			for (i = 0; i < n; i++) {
+				if (mass[i] < min) {
+					min = mass[i];
+					minI = i;
+
+				}
+				if (mass[i] > max) {
+					max = mass[i];
+					maxI = i;
+
+				}
+			}
+			if (minI < maxI) {
+				for (i = minI+1; i < maxI; i++) {
+						mass[i] = 0;
+				}
+			}
+			else {
+				for (i = maxI+1; i < minI; i++) {
+					mass[i] = 0;
+				}
+
+			}
+			cout << "Новый массив: ";
+				for (i = 0; i < n; i++) {
+					cout << mass[i]<<" ";
+
+			}
+      return 0;
