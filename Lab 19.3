@@ -1,0 +1,32 @@
+setlocale(LC_ALL, "Russian");
+	int n, m, i, j, c, min, max;
+	cout << "Введите m и n: ";
+	cin >> m >> n;
+	c = 0;
+	min = INT_MAX;
+	max = INT_MIN;
+	int** mass = new int* [n];
+	for (i = 0; i < n; i++)
+		mass[i] = new int[m];
+	cout << "Заполните элементы матрицы: ";
+	for (i = 0; i < n; i++)
+		for (j = 0; j < m; j++)
+			cin >> mass[i][j];
+	for (i = 0; i < n / 2; i++)
+	{
+		for (j = 0; j < m / 2; j++)
+		{
+			c = mass[i][j];
+			mass[i][j] = mass[n / 2 + i][m / 2 + j];
+			mass[n / 2 + i][m / 2 + j] = c;
+		}
+	}
+	cout << "Преобразованная матрица: " << endl;
+	for (i = 0; i < n; i++)
+		for (j = 0; j < m; j++)
+		{
+			cout << mass[i][j] << " ";
+			if (j == m - 1) cout << endl;
+		}
+	return 0;
+    
