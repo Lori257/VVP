@@ -1,0 +1,65 @@
+setlocale(LC_ALL, "Russian");
+	int i, minI, maxI, n, i1;
+	double max, min,tf;
+	minI = 0;
+	maxI = 0;
+	i1 = 0;
+  tf=0;
+	cout << "Введите n: ";
+	cin >> n;
+	float* mass = new float[n];
+	float* mass2 = new float[n + 2];
+	cout << "Введите массив: ";
+	for (i = 0; i < n; i++)
+	{
+		cin >> mass[i];
+	}
+	min = DBL_MAX;      
+	max = DBL_MIN;
+	for (i = 0; i < n; i++)
+	{
+		if (mass[i] < min)
+		{
+			min = mass[i];
+			minI = i;
+		}
+		if (mass[i] > max)
+		{
+			max = mass[i];
+			maxI = i;
+		}
+	}
+	for (i = 0; i < n + 2; i++)
+	{
+		tf = 0;
+		if (i1 == minI && i1 == 0)
+		{
+			mass2[i1] = 0;
+			i=i+1;
+		}
+		else if (i1 == minI)
+		{
+			mass2[i] = 0;
+			i=i+1;
+		}
+		if (i1 == maxI)
+		{
+			mass2[i + 1] = 0;
+			tf = 1;
+		}
+		if (i < n + 2 && i >= 0) {
+			mass2[i] = mass[i1];
+		}
+		if (tf == 1) {
+			i = i + 1;
+		}
+		if (i1 < n) {
+			i1 = i1 + 1;
+		}
+	}
+	for (i = 0; i < n + 2; i++)
+	{
+		cout << mass2[i] << " ";
+	}
+
+	return 0;
