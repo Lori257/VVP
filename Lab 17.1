@@ -1,0 +1,32 @@
+setlocale(LC_ALL,"Russian";
+  int n, i, k;
+	cout << "Введите n: ";
+	cin >> n;
+	int* massA= new int[n];
+	int* massB = new int[n];
+	int* massC = new int[n];
+	for (i = 0; i < n; i++)
+	{
+		cin >> massA[i];
+	}
+	k = 0;
+	massB[k] = 1;
+	massC[k] = massA[k];
+	for (i = 1; i < n; i++)
+	{
+		if (massA[i - 1] == massA[i]) {
+			massB[k]=massB[k]+ 1;
+		}
+		else
+		{
+			k=k+1;
+			massB[k]= 1;
+			massC[k] = massA[i];
+		}
+	}
+	cout << "Результат: " << endl;
+	for (i = 0; i <= k; i++)
+	{
+		cout << massB[i] << " раз(а) по " << massC[i] << endl;
+	}
+  return 0;
