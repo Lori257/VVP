@@ -1,0 +1,31 @@
+setlocale(LC_ALL,"Russian");
+int a, sum,i,k,j,b,c,d;
+cout << "Введите a: ";
+cin >> a;
+sum = 0;
+int* mass = new int[a];
+int* mass2 = new int[a];
+cout << "Введите массив : ";
+for (i = 0; i < a; i++)
+{
+	cin >> mass[i] >> mass2[i];
+}
+for (i = 0; i < a - 2; i++)
+	for (j = i + 1; j < a - 1; j++)
+		for (k = j + 1; k < a; k++)
+		{
+			if ((sqrt(pow((mass[i] - mass[j]), 2) + pow((mass2[i] - mass2[j]), 2))
+				+ sqrt(pow((mass[j] - mass[k]), 2) + pow((mass2[j] - mass2[k]), 2))
+				+ sqrt(pow((mass[k] - mass[i]), 2) + pow((mass2[k] - mass2[i]), 2))) > sum)
+			{
+				sum = sqrt(pow((mass[i] - mass[j]), 2) + pow((mass2[i] - mass2[j]), 2))
+					+ sqrt(pow((mass[j] - mass[k]), 2) + pow((mass2[j] - mass2[k]), 2))
+					+ sqrt(pow((mass[k] - mass[i]), 2) + pow((mass2[k] - mass2[i]), 2));
+				b = i;
+				c = j;
+				d = k;
+
+			}
+		}
+cout << "Треугольник с вершинами (" << mass[b] << ", " << mass2[b] << "), (" << mass[c] << ", " << mass2[c] << "), (" << mass[d] << ", " << mass2[d] << ") имеет наибольший периметр, равный " << sum << "." << endl;
+return 0;
