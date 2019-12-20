@@ -1,0 +1,59 @@
+setlocale(LC_ALL,"Russian");
+int n, i, k,z,f,c,m,j;
+cout << "Введите n: ";
+cin >> n;
+int* mass = new int[n];
+int* mass2 = new int[n];
+for (i = 0; i < n; i++)
+{
+	cin >> mass[i];
+}
+cout << "Введите k:";
+cin >> k;
+m = 1;
+f= 0;
+if (k > 0) {
+	if (k == 1) {
+		z = 1;
+	}
+	else z = 0;
+	j = -1;
+	for (i = 1; i < n; i++) {
+		if (mass[i - 1] != mass[i]) {
+			m = m + 1;
+			if (m == k) {
+				f = i;
+			}
+			c = i;
+		}
+		if (m == k) {
+			z = z + 1;
+		}
+	}
+	for (i = 0; i < f; i++) {
+		mass2[++j] = mass[i];
+	}
+
+	for (i = c; i < n; i++) {
+		mass2[++j] = mass[i];
+	}
+
+	for (i = f + z; i < c; i++) {
+		mass2[++j] = mass[i];
+	}
+
+	for (i = f; i < f + z; i++) {
+		mass2[++j] = mass[i];
+	}
+
+	for (i = 0; i < n; i++) {
+		mass[i] = mass2[i];
+	}
+	cout << "Результат:" << endl;
+	for (i = 0; i < n; i++)
+	{
+		cout << i + 1 << ": " << mass[i] << endl;
+	}
+}
+else cout << "Error";
+return 0;
