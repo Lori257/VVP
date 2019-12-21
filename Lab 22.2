@@ -1,0 +1,39 @@
+
+#include "pch.h"
+#include <iostream>
+#include <fstream>
+#include <Math.h>
+#include <windows.h>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+
+	setlocale(LC_ALL, "Russian");
+	SetConsoleOutputCP(1251);
+	SetConsoleCP(1251);
+	int i, j, n, k;
+	char c;
+	fstream F; //переменная для файла
+	string filename;	
+	filename = "";
+	cout << "Введите путь файла: " << endl;	
+	getline(cin, filename);
+	cout << "Введите целые N и K: " << endl;
+	cin >> n >> k;
+	F.open(filename, ios::out);
+	if (F)
+	{
+		for (i = 0; i < n; i++)
+		{
+			for (j = 0; j < k; j++) {
+				F << '*';
+			}
+			F << endl;
+		}		
+		F.close();
+	}
+	else cout << "Файл не существует" << endl;
+}
