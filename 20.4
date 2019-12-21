@@ -1,0 +1,29 @@
+#include "pch.h"
+#include <iostream>
+#include <Math.h>
+#include <windows.h>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+	setlocale(LC_ALL, "Russian");
+	SetConsoleOutputCP(1251);
+	SetConsoleCP(1251);
+	int i;	
+	char c;	
+	string s;
+	s = "";
+	cout << "Введите строку S: ";	
+	getline(cin, s);
+	cout << "Введите символ С: ";
+	cin >> c;
+	for (i = s.length() - 1; i >= 0; i--)
+	{
+		if (s[i] == c) {
+			s.insert(i, 1, c);
+		}
+	}
+	cout << s << endl;
+}
