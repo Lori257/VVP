@@ -1,0 +1,50 @@
+#include "pch.h"
+#include <iostream>
+#include <fstream>
+#include <Math.h>
+#include <windows.h>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+	setlocale(LC_ALL, "Russian");
+	SetConsoleOutputCP(1251);
+	SetConsoleCP(1251);	
+	fstream F, G;
+	string s, s0, filename, filename2;
+	s = "";
+	s0 = "";
+	filename = "";
+	filename2 = "";
+
+	cout << "Введите путь первого файла: " << endl;
+
+	getline(cin, filename);
+	F.open(filename);
+	if (F)
+	{
+		getline(F, s0, '\0');
+		F.close();
+	}
+	else cout << "Первый файл не существует" << endl;
+
+	cout << "Введите путь второго файла: " << endl;
+	getline(cin, filename2);
+	G.open(filename2);
+	if (G)
+	{
+		getline(G, s, '\0');
+		G.close();
+	}
+	else cout << "Второй файл не существует" << endl;
+
+	F.open(filename, ios::out);
+	if (F)
+	{
+		F << s << s0;		
+		F.close();
+	}
+	else cout << "Файл не существует" << endl;
+}
