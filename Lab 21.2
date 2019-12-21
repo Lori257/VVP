@@ -1,0 +1,37 @@
+#include "pch.h"
+#include <iostream>
+#include <Math.h>
+#include <windows.h>
+#include <string>
+
+using namespace std;
+
+
+int main()
+{
+	setlocale(LC_ALL, "Russian");
+	SetConsoleOutputCP(1251);
+	SetConsoleCP(1251);
+	int i, n, b;	
+	string s;
+	s = "";
+	cout << "Введите строку S: ";
+	cin.ignore();
+	getline(cin, s);
+	n = 0;
+	b = INT_MAX;
+	for (i = 0; i < s.length(); i++)
+	{
+		if (s[i] != ' ') {
+			n++;
+		}
+		if (s[i] == ' ' || i == s.length() - 1)
+		{
+			if (n != 0 && n < b) {
+				b = n;
+			}
+			n = 0;
+		}
+	}
+	cout << "Длина самого маленького слова: " << b << endl;
+}
