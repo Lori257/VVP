@@ -1,0 +1,40 @@
+
+#include "pch.h"
+#include <iostream>
+#include <fstream>
+#include <Math.h>
+#include <windows.h>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+	setlocale(LC_ALL, "Russian");
+	SetConsoleOutputCP(1251);
+	SetConsoleCP(1251);
+	int i, b;	
+	fstream F;	
+	string s, filename;
+	s = "";
+	filename = "";
+	cout << "Введите путь файла: " << endl;	
+	getline(cin, filename);
+	F.open(filename);
+	if (F)
+	{
+		getline(F, s, '\0');
+		F.close();
+	}
+	else cout << "Первый файл не существует" << endl;
+	b = 0;
+	for (i = 4; i < s.length(); i++)
+	{
+		if (s[i - 4] == ' ' && s[i - 3] == ' ' && s[i - 2] == ' ' && s[i - 1] == ' ' && s[i] == ' ')
+		{
+			b++;
+		}
+	}
+
+	cout << "Количество абзацев в тексте: " << b << endl;
+}
