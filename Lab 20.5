@@ -1,4 +1,4 @@
-#include "pch.h"
+
 #include <iostream>
 #include <Math.h>
 #include <windows.h>
@@ -23,7 +23,7 @@ int main()
 	while (s.find(s0) >= 0 && s.find(s0) < s.length() + 1)
 	{
 		s.erase(s.find(s0), s0.length());
-		n++;
+		n=n+1;
 	}
 	cout << "Количество вхождений:" << n << endl;
 
