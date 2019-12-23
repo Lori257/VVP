@@ -1,5 +1,4 @@
 
-#include "pch.h"
 #include <iostream>
 #include <Math.h>
 #include <windows.h>
@@ -21,7 +20,7 @@ int main()
 	n = 0;
 	for (i = 1; i < s.length() - 1; i++) {
 		if (s[i - 1] != ' ' && s[i] == ' ' && s[i + 1] != ' ') {
-			n++;
+			n=n+1;
 		}
 	}
 	cout << "Количество слов в строке: " << n + 1 << endl;
