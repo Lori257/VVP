@@ -1,4 +1,4 @@
-#include "pch.h"
+
 #include <iostream>
 #include <Math.h>
 #include <windows.h>
@@ -24,7 +24,7 @@ int main()
 		if (i % 2 == 1)
 		{
 			s[b] = s0[i];
-			b++;
+			b=b+1;
 		}
 	}
 	for (i = s.length() - 1; i >= 0; i--)
@@ -32,8 +32,9 @@ int main()
 		if (i % 2 == 0)
 		{
 			s[b] = s0[i];
-			b++;
+			b=b+1;
 		}
 	}
-	cout << "Зашифрованная строка: " << s << endl;
+	cout << "Зашифрованная строка: " << s << endl
+}
 
