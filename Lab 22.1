@@ -1,5 +1,4 @@
 
-#include "pch.h"
 #include <iostream>
 #include <fstream>
 #include <Math.h>
@@ -16,19 +15,19 @@ int main()
 	SetConsoleCP(1251);
 	int i;
 	char c;
-	fstream F; //переменная для файла
+	fstream F; 
 	string s, filename;
 	s = "";
 	filename = "";
 
 	cout << "Введите путь файла: " << endl;
 	getline(cin, filename);
-	F.open(filename); //открыть файл
-	if (F) // проверка, существует ли файл
+	F.open(filename); 
+	if (F) 
 	{
-		while (!F.eof()) // проверка, не пуст ли файл
+		while (!F.eof()) 
 		{
-			getline(F, s, '\0'); //  \0 - конец строки
+			getline(F, s, '\0'); 
 			for (i = s.find(' ') + 1; i < s.length(); i++) {
 				F << s[i];
 			}
@@ -37,7 +36,7 @@ int main()
 	}
 	else cout << "Файл не существует" << endl;
 
-	F.open(filename, ios::out); //ios::out - производить операции
+	F.open(filename, ios::out);
 	if (F)
 	{
 		for (i = s.find(' ') + 1; i < s.length(); i++) {
