@@ -1,5 +1,4 @@
 
-#include "pch.h"
 #include <iostream>
 #include <fstream>
 #include <Math.h>
@@ -16,12 +15,12 @@ int main()
 	SetConsoleCP(1251);
 	int i, j, n, k;
 	char c;
-	fstream F; //переменная для файла
+	fstream F; 
 	string filename;	
 	filename = "";
 	cout << "Введите путь файла: " << endl;	
 	getline(cin, filename);
-	cout << "Введите целые N и K: " << endl;
+	cout << "Введите целые n и k: " << endl;
 	cin >> n >> k;
 	F.open(filename, ios::out);
 	if (F)
