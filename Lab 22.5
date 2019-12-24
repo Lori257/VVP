@@ -1,5 +1,4 @@
 
-#include "pch.h"
 #include <iostream>
 #include <fstream>
 #include <Math.h>
@@ -18,6 +17,7 @@ int main()
 	string s, filename;
 	s = "";
 	filename = "";
+	b=0;
 	cout << "Введите путь файла: " << endl;	
 	getline(cin, filename);
 	F.open(filename);
@@ -27,12 +27,11 @@ int main()
 		F.close();
 	}
 	else cout << "Первый файл не существует" << endl;
-	b = 0;
 	for (i = 4; i < s.length(); i++)
 	{
 		if (s[i - 4] == ' ' && s[i - 3] == ' ' && s[i - 2] == ' ' && s[i - 1] == ' ' && s[i] == ' ')
 		{
-			b++;
+			b=b+1;
 		}
 	}
 
